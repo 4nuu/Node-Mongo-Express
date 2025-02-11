@@ -1,0 +1,56 @@
+.major-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(119, 72, 160); */
+    background-color: rgb(134, 14, 182);
+
+}
+h1{
+    color: white !important;
+}
+
+.main-div {
+    height: 600px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 19, 96);
+}
+
+/* .main-div button {
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+} */
+
+.map {
+    height: 50px;
+    /* width: 800px; */
+    /* width: 600px; */
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-inside {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.map span {
+    width: 300px;
+    padding: 40px;
+}
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
