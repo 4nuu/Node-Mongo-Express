@@ -1,5 +1,5 @@
 .major-div {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ h1{
 }
 
 .main-div {
-    height: 600px;
+    /* height: 600px; */
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -21,16 +21,8 @@ h1{
     background-color: rgb(24, 19, 96);
 }
 
-/* .main-div button {
-    border-radius: 5px;
-    background-color: transparent;
-    color: white;
-} */
-
 .map {
     height: 50px;
-    /* width: 800px; */
-    /* width: 600px; */
     border: 1px solid white;
     display: flex;
     justify-content: center;
