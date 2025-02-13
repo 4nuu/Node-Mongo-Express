@@ -65,7 +65,7 @@ const Mainserver = () => {
 
       console.log([...dataForm.entries()], "dataForm");
 
-      let response = await axios.post(`${API}users`, dataForm, {
+      let response = await axios.post(`${API}upload`, dataForm, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log(response);
@@ -77,14 +77,14 @@ const Mainserver = () => {
   };
 
   const onHandlePut = async (id, newText) => {
-    // console.log(id);
+    console.log(id);
 
     try {
       setIsEditing(false);
       setEditingUserId(null);
       let response = await axios.put(`${API}/users/${id}`, {
         newText: newText,
-      });
+      });      
       getAllUserData();
       // console.log(response,"responseeeeeeeeee");
     } catch (error) {
@@ -93,6 +93,8 @@ const Mainserver = () => {
   };
 
   const handleEdit = (id, name) => {
+    // console.log(id, name);
+    
     setIsEditing(true);
     setEditingUserId(id);
     setNewText(name);
@@ -218,7 +220,7 @@ const Mainserver = () => {
             Close
           </Button>
           <Button variant="primary" onClick={AddNewUser}>
-            Save Changes
+            Save
           </Button>
         </Modal.Footer>
       </Modal>
@@ -228,14 +230,15 @@ const Mainserver = () => {
             <>
               <div key={value._id} className="map">
                 <img
+                src={`http://localhost:5500/uploads/${value.image}`}
                   alt={`Uploaded File ${value.id}`}
                   className="profile-img"
                 />
                 <span style={{ color: "white" }}>{value.name}</span>
 
                 <div className="map-inside">
-                  {editingUserId !== value.id ? (
-                    <Button onClick={() => handleEdit(value.id, value.name)}>
+                  {editingUserId !== value._id ? (
+                    <Button onClick={() => handleEdit(value._id, value.name)}>
                       Edit
                     </Button>
                   ) : (
