@@ -45,6 +45,7 @@ const Mainserver = () => {
       [name]: value,
     }));
   };
+  // console.log(formData, "formData");
 
   const handleFileChange = (e) => {
     setFormData((prevFormData) => ({
@@ -97,7 +98,7 @@ const Mainserver = () => {
     setNewText(name);
   };
 
-  const onHandleDeleteSingleUser = async (UID) => {
+  const DeleteUser = async (UID) => {
     console.log(UID,"INSIDE DELETE SINGLE");
     try {
       let response = await axios.delete(
@@ -261,20 +262,11 @@ const Mainserver = () => {
                   )}
                   <Button
                     variant="danger"
-                    onClick={() => onHandleDeleteSingleUser(value._id)}
+                    onClick={() => DeleteUser(value._id)}
                   >
                     Delete
                   </Button>
-                  <input
-                    type="file"
-                    onChange={handleUploadFile}
-                    id="control"
-                    className="form-control"
-                  />
-                  <Button variant="info" onClick={fileUpload}>
-                    Upload
-                  </Button>
-                </div>
+                  </div>
               </div>
             </>
           );
