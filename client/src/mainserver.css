@@ -1,9 +1,7 @@
 .major-div {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(119, 72, 160); */
     background-color: rgb(134, 14, 182);
 
 }
@@ -12,26 +10,19 @@ h1{
 }
 
 .main-div {
-    height: 600px;
     width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
     align-items: center;
     background-color: rgb(24, 19, 96);
 }
 
-/* .main-div button {
-    border-radius: 5px;
-    background-color: transparent;
-    color: white;
-} */
-
 .map {
-    height: 50px;
-    /* width: 800px; */
-    /* width: 600px; */
+    height: 90px;
     border: 1px solid white;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +30,7 @@ h1{
 
 .map-inside {
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
     padding-right: 10px;
 }
 
